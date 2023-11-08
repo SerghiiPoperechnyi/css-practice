@@ -1,0 +1,68 @@
+{{!-- 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+
+<header class="header">
+    <div >
+        {{> logo}}
+    </div>
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{> nav list=header}}
+        </div>
+    </nav>
+</header>
+
+{{#with main}}
+    <div class="main">
+        <img src="{{image}}" alt="Main image" class="main_image">
+        <div class="main_content">
+            <h1 class="main_title">{{heading}}</h1>
+            <p class="main_text">{{description}}</p>
+            <div>
+            <a href="{{href}}" class="button main_button">{{button}}</a>
+            </div>
+        </div>
+    </div>
+{{/with}}
+
+<main class="featured">
+    {{#each featured}}
+        {{> cardFeatured data=this}}
+    {{/each}}
+</main>
+
+
+    <div class="actions">
+        {{#each actions}}
+            <div class="actions_content">    
+                <div>
+                    <h3 class="actions_title">{{heading}}</h3>
+                </div>
+                <div>
+                    <a href="{{url}}" class="button actions_button">{{text}}</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+
+<footer class="footer">
+    <div>
+        {{> logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+        <div>
+            <span class="footer_title">{{title}}</span>
+            {{> nav list=links isVertical=true}}
+        </div>
+    {{/each}}
+</footer>
+
+
+{{!-- 
+Цей код містить лише те, що буде виводитись в <body>
+Адже наш layout/default.hbs має вже структуру HTML
+--}}

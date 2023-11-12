@@ -19,9 +19,18 @@
         <div class="hero_content">
             {{> hero}}
         </div>
-        <img src="{{photo}}" alt="Hero image" class="hero_image">
+        <div class="hero_slider">
+            <div class="hero_slider_icon hero_slider_left"> < </div>
+                <img src="{{photo}}" alt="Hero image" class="hero_image">
+            <div class="hero_slider_icon hero_slider_right"> > </div>
+        </div>
     </div>
 {{/with}}
+
+<div class="modal">
+    {{hero.text}} {{hero.text}}
+    <div class="modal_text">{{hero.text}} {{hero.text}}</div>
+</div>
 
 <main class="blog">
     {{#each blog}}

@@ -1,0 +1,79 @@
+{{!-- 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+--}}
+
+<header class="header">
+    {{#with header}}
+        <div class="header_top">    
+            <div class="logo">{{brandName}}</div>
+            <nav class="header_nav">
+                <div class="header_nav_right">
+                    {{> nav list=links}}
+                </div>
+            </nav>
+        </div>
+        <div class="ad">
+            <div class="ad_left">
+                <div class="ad_logo">Ad</div>
+                {{#with ad}}
+                    <div class="ad_text">{{text}}: {{url}}</div>
+                {{/with}}
+            </div>
+            <div class="ad_text">Users online: {{userOnline}}</div>
+        </div>
+    {{/with}}
+</header>
+
+{{#with hero}}
+    <div class="hero">
+        <h2 class="hero_title">{{title}}</h2>
+        <p class="hero_text">{{description}}</p>
+        <a href="{{button.url}}" class="hero_button button">{{button.text}}</a>
+    </div>
+{{/with}}
+
+{{#with about}}
+    <div class="about">
+        <h3 class="about_heading">{{heading}}</h3>
+        <p class="about_text">{{info}}</p>
+    </div>
+{{/with}}
+
+<div class="articles">
+    <div class="articles_head">
+        <h2 class="art_left">Our Articles</h2>
+        <a href="#" class="art_right">View All</a>
+    </div>
+    <div class="articles_card">
+        {{#each articles}}
+        <div>
+            {{#if isNew}}
+                <badge class="badge_new">NEW</badge>
+            {{/if}}
+            <img src="{{photo}}" alt="#" class="card_photo"> 
+            <div class="card_title">{{name}}</div>
+            <div class="card_description">{{description}}</div>
+            <div><a href="#" class="card_button button">Read all</a></div>
+        </div>    
+        {{/each}}
+    </div>
+</div>
+
+<footer class="footer">
+    {{#with footer}}
+        <div class="pages">
+            {{#each pages}}
+                <a href="{{path}}" id="{{id}}" class="pages_link">{{name}}</a>
+            {{/each}}
+        </div>
+    <div class="copyright">{{copyright}}</div>
+    {{/with}}
+    
+</footer>
+
+
+{{!-- 
+Цей код містить лише те, що буде виводитись в <body>
+Адже наш layout/default.hbs має вже структуру HTML
+--}}

@@ -115,114 +115,49 @@
 .main {
     display: flex;
     width: 100%;
-    gap: 40px;
-    align-items: flex-start;
+    gap: 24px;
+    align-items: center;
 }
-.messages {
-    max-width: 620px;
+.info {
+    max-width: 580px;
     width: 100%;
-
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-d);
-    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
-    padding: var(--space-l);
     display: flex;
     flex-direction: column;
-    gap: var(--space-l);
 }
-.messages_title {
-    font-size: var(--size-b);
-    color: var(--color-title);
-    font-weight: var(--weight-text);
-    padding-bottom: var(--space-m);
-    border-bottom: 1px solid var(--color-border);
+.info_title {
+    font-size: 56px;
+    color: #212529;
+    font-weight: 700;
+    padding-bottom: 24px;
 }
-.messages_link {
-    color: var(--color-primary);
-    font-size: var(--size-s);
-    align-self: flex-end;
-    transition-duration: 0.7s ;
-    transition-property: opacity, border-color;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-
-}
-.messages_link:hover {
-    opacity: 0.7;
-    border-color: var(--color-primary);
-}
-.msg {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
-    padding-bottom: var(--space-m);
-    border-bottom: 1px solid var(--color-border);
-    
-    position: relative;
-    padding-right: var(--space-b);
-}
-.msg_name {
-    font-size: var(--size-d);
-    color: var(--color-title);
-    font-weight: var(--weight-title);
-}
-.msg_text {
-    font-size: var(--size-d);
-    color: var(--color-title);
-    font-weight: var(--weight-text);
-}
-.msg_day {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.advanteges {
-    display: flex;
-    gap: var(--space-l);
-    /* align-items: flex; */
-}
-.advanteges > div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e4eaf2;
-    border-radius: var(--border-radius-d);
-    padding: var(--space-l);
-    gap: var(--space-s);
-    width: 100%;
-}
-.advanteges > div > strong {
-    color: var(--color-title);
-    font-weight: var(--weight-title);
-    font-size: 18px;
-}
-.advanteges > div > p {
-    color: #767676;
-    font-size: var(--size-d);
-    line-height: 150%;
+.info_text {
+    font-size: 24px;
+    color: #212529;
+    font-weight: 400;
+    width: 410px;
 }
 .form {
-    max-width: 340px;
+    max-width: 390px;
     width: 100%;
-    background-color: var(--color-white);
-    border-radius: var(--border-radius-d);
-    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
-    padding: var(--space-l);
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius-s);
+    border: 1px solid #dee2e6;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
 }
-.form_title {
-    text-align: center;
-    font-size: var(--size-b);
-    font-weight: var(--weight-text);
-    color: var(--color-title);
-}
 .form_info {
-    text-align: center;
+    
     font-size: var(--size-d);
     font-weight: var(--weight-text);
     color: #6c757d;
+}
+.divider {
+    opacity: 0.25;
+    background: #212529;
+    height: 1px;
+    align-self: stretch;
 }
 .form_button {
     text-align: center;
@@ -242,11 +177,13 @@
     display: flex;
     gap: var(--space-m);
     flex-direction: column;
+
 }
 .form_input {
     padding: var(--space-xm);
     border: 1px solid #ced4da;
     border-radius: var(--border-radius-s);
+    background-color: var(--color-white);
 }
 .form_input::placeholder {
     color: var(--color-title);
@@ -266,6 +203,7 @@
     border-radius: 4px;
     height: 13px;
     width: 13px;
+    background-color: var(--color-white);
 }
 .form_checkbox > input:checked ~ div {
     border: 1px solid var(--color-primary);
@@ -275,4 +213,124 @@
     color: var(--color-title);
     font-size: var(--size-d);
     cursor: pointer;
+}
+
+.updates {
+    max-width: 1000px;
+    width: 100%;
+    padding: var(--space-l);
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--space-l); */
+}
+.updates_title {
+    font-size: 24px;
+    color: #212529;
+    font-weight: 400;
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 12px;
+}
+.upd {
+    display: flex;
+    padding: 12px 0;
+    gap: 8px;
+}
+.upd_icon {
+    height: 32px;
+    width: 32px;
+}
+.upd_icon_1 {
+    background-color: #007bff;
+}
+.upd_icon_2 {
+    background-color: #e83e8c;
+}
+.upd_icon_3 {
+    background-color: #6F42C1;
+}
+
+.upd_description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--color-border);
+}
+.updates_nickname {
+    font-size: 12px;
+    color: #6c757d;
+    font-weight: 700;
+    line-height: 16px;
+}
+.updates_description {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 400;
+}
+.upd_link {
+    color: var(--color-primary);
+    font-size: 14px;
+    padding-top: 12px;
+    transition-duration: 0.7s ;
+    transition-property: opacity, border-color;
+}
+.upd_link:hover {
+    opacity: 0.7;
+    border-color: var(--color-primary);
+}
+
+.expirience {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 24px;
+    background-color: #f8f9fa;
+}
+.expirience > div {
+    display: flex;
+    gap: 24px;
+}
+.exp_card {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #e4eaf2; */
+    border-radius: var(--border-radius-d);
+    padding: 16px;
+    gap: 8px;
+    width: 100%;
+    background-color: #212529;
+}
+.exp_title {
+    color: #212529;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+.exp_card > strong {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 20px;
+}
+.exp_card > p {
+    color: #b1b1b1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.exp_badge {
+    position: absolute;
+    background-color: #FF7347;
+    border-radius: 70px;
+    transform: rotate(30deg);
+    padding: 12px 24px;
+    align-items: center;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    top: -25px;
+    right: -35px;
 }

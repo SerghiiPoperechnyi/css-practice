@@ -15,6 +15,7 @@
 </header>
 
 {{#with hero}}
+<div class="hero_container">
     <div class="hero">
         <div class="hero_content">
             {{> hero}}
@@ -25,12 +26,13 @@
             <div class="hero_slider_icon hero_slider_right"> > </div>
         </div>
     </div>
+</div>
 {{/with}}
 
-<div class="modal">
+{{!-- <div class="modal">
     {{hero.text}} {{hero.text}}
     <div class="modal_text">{{hero.text}} {{hero.text}}</div>
-</div>
+</div> --}}
 
 <main class="blog">
     {{#each blog}}
@@ -41,7 +43,7 @@
     <div class="form">
         <div class="form_content">
             <h3 class="form_title">{{title}}</h3>
-            <p class="form_info">{{info}}</p>
+            <p class="form_info">{{info}}<span class="ex">x</span></p>
         </div>
         <div class="form_action">
             <a href="{{href}}" class="button form_button">{{button}}</a>
@@ -61,7 +63,7 @@
         </div>
     {{/each}}
 </footer>
-
+<div class="test">Test</div>
 
 {{!-- 
 Цей код містить лише те, що буде виводитись в <body>

@@ -49,8 +49,11 @@
     }
     .page_section_light {
         background-color: var(--color-light);
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-items: center;
+        justify-content: center;
+        align-items: center;
     }
     .feat_icon {
         height: 48px;
@@ -276,6 +279,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 40px;
+        padding-bottom: 64px;
     }
     .about_title {
         font-size: var(--size-5);
@@ -409,8 +413,11 @@ body {
             grid-template-columns: 1fr 1fr;
         }
         .tools_card {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }  
+        .tools_card > .tools_description:nth-of-type(-n+2) {
+            grid-row: span 1;
+        }
         .deliveroo_image {
             max-width: 450px;
         }   
@@ -430,8 +437,8 @@ body {
             grid-template-columns: 1fr;
             gap: var(--spacing-2);
         }
-        .tools_card {
+        /* .tools_card {
             grid-template-columns: 1fr;
-        } 
+        }  */
     } 
 }
